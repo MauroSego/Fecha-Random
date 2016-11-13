@@ -1,0 +1,23 @@
+.container{
+	margin: 0 auto;
+	width: 50%;
+	text-align: center;
+	border: 1px solid black;
+	border-radius: 6px;
+	padding: 0.5em;
+}
+.title {
+	margin: 0.2em;
+	font-family: 'Covered By Your Grace', cursive;
+	font-size: 45px;
+}
+.btn{
+	border: 0;
+	width: 250px;
+	padding: 12px;
+	border-radius: 6px;
+}
+.btn:hover{
+	background: red;
+	transition: 0.5s ease;
+}
