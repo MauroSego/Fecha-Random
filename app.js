@@ -1,7 +1,38 @@
 $(document).ready(function(){
-	$('#btn').click(crearRandom)
   var meses = []
   var anios = []
+  var papeles = [
+    "APBR",
+    "GGAL",
+    "ERAR",
+    "AGRO",
+    "ALUA",
+    "BMA",
+    "CELU",
+    "CRES",
+    "CTIO",
+    "MIRG",
+    "PAMP",
+    "TRAN",
+    "TS",
+    "YPFD"
+  ]
+  var ticker
+
+  $('#btn').click(crearRandom)
+
+  function randomArbitrary(min, max){
+    /*var min = 0;
+    var max = papeles.length;*/
+    var randomPapel =  Math.round(Math.random() * (max - min) + min);
+    //return randomPapel
+    ticker = papeles[randomPapel];
+    //console.log('Papel: ' + papeles[randomPapel])
+    //$('.resultado').append("<p>Papel: "+papeles[randomPapel]+"</p>")
+    return ticker
+
+  }
+
 
   function meterAnios () {
   for (i=2002; i < 2016; i++){
@@ -13,6 +44,7 @@ $(document).ready(function(){
     meses.push(i);
   }}
 
+
   meterMeses()
   meterAnios()
 
@@ -22,6 +54,11 @@ $(document).ready(function(){
     var mes =  meses[mesRandom];
     var aniosRandom = Math.round(Math.random()*10);
     var anio = anios[aniosRandom];
+
+    var cantPapeles = papeles.length - 1;
+    randomArbitrary(0, cantPapeles);
+
+    console.log(ticker)
 
     if(dia == 0){
       dia++;
@@ -37,8 +74,9 @@ $(document).ready(function(){
     }
     $('#resultado').empty();
     var resultado = 'Fecha: ' + dia + '/' + mes + '/' + anio;
-    $('#resultado').append("<p>"+resultado+"</p>")
-    console.log(resultado);
+    $('.resultado').append("<p>"+resultado+"</p><p>Papel: "+ticker+"</p>")
+
+    //console.log(papeles[randomPapel])
   }
 
 });

@@ -30,7 +30,8 @@ body {
 	color: #fff;
 	transition: 0.7s ease;
 }
-.resultado {
+.resultado p {
+	margin: 0;
 	font-size: 4em;
 	color: #FFA810;
 	font-family: 'Open Sans Condensed', sans-serif;	
