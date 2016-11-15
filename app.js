@@ -22,13 +22,8 @@ $(document).ready(function(){
   $('#btn').click(crearRandom)
 
   function randomArbitrary(min, max){
-    /*var min = 0;
-    var max = papeles.length;*/
     var randomPapel =  Math.round(Math.random() * (max - min) + min);
-    //return randomPapel
     ticker = papeles[randomPapel];
-    //console.log('Papel: ' + papeles[randomPapel])
-    //$('.resultado').append("<p>Papel: "+papeles[randomPapel]+"</p>")
     return ticker
 
   }
@@ -36,6 +31,11 @@ $(document).ready(function(){
   function randomAnio(min, max){
     anio = Math.round(Math.random() * (max - min) + min)
     return anio
+  }
+
+  function randomMes(min, max){
+    mes = Math.round(Math.random() * (max - min) + min)
+    return mes
   }
 
 
@@ -48,10 +48,9 @@ $(document).ready(function(){
 
   function crearRandom(){
     var dia = Math.round(Math.random()*100);
-    var mesRandom = Math.round(Math.random()*10);
-    var mes =  meses[mesRandom];
     randomAnio(2002, 2016);
     console.log(anio)
+    randomMes(1, 12);
 
     var cantPapeles = papeles.length - 1;
     randomArbitrary(0, cantPapeles);
@@ -72,7 +71,6 @@ $(document).ready(function(){
     $('#resultado').empty();
     var resultado = 'Fecha: ' + dia + '/' + mes + '/' + anio;
     $('.resultado').append("<p>"+resultado+"</p><p>Papel: "+ticker+"</p>")
-    //console.log(papeles[randomPapel])
   }
 
 });
