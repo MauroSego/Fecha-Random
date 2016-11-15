@@ -35,8 +35,10 @@ $(document).ready(function(){
         return dia;
         }
     }
-
-    console.log('Fecha: ' + dia + '/' + mes + '/' + anio);
+    $('#resultado').empty();
+    var resultado = 'Fecha: ' + dia + '/' + mes + '/' + anio;
+    $('#resultado').append("<p>"+resultado+"</p>")
+    console.log(resultado);
   }
 
 });

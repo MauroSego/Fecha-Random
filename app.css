@@ -1,14 +1,22 @@
-.container{
-	margin: 0 auto;
+body {
+	background: #222;
+	color: white;
+	
+}
+.container, .container-resultado{
+	margin: 10vh auto;
 	width: 50%;
 	text-align: center;
-	border: 1px solid black;
+	border: 1px solid #fff;
 	border-radius: 6px;
 	padding: 0.5em;
 }
+.container-resultado{
+	height: 250px;
+}
 .title {
 	margin: 0.2em;
-	font-family: 'Covered By Your Grace', cursive;
+	font-family: 'Open Sans Condensed', sans-serif;
 	font-size: 45px;
 }
 .btn{
@@ -18,6 +26,12 @@
 	border-radius: 6px;
 }
 .btn:hover{
-	background: red;
-	transition: 0.5s ease;
+	background: black;
+	color: #fff;
+	transition: 0.7s ease;
+}
+.resultado {
+	font-size: 4em;
+	color: #FFA810;
+	font-family: 'Open Sans Condensed', sans-serif;	
 }
